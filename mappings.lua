@@ -6,21 +6,33 @@
 return {
   -- first key is the mode
   n = {
-    -- second key is the lefthand side of the map
-    -- mappings seen under group name "Buffer"
-    ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
-    ["<leader>bD"] = {
-      function()
-        require("astronvim.utils.status").heirline.buffer_picker(function(bufnr) require("astronvim.utils.buffer").close(bufnr) end)
-      end,
-      desc = "Pick to close",
-    },
-    -- tables with the `name` key will be registered with which-key if it's installed
-    -- this is useful for naming menus
-    ["<leader>b"] = { name = "Buffers" },
     -- quick save
-    -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<C-s>"] = { ":w!<cr>", desc = "Save File"  }, 
+
+    -- TELESCOPE
+    ["<C-p>"] = {
+      function()
+        require("telescope.builtin").git_files() 
+      end,
+      desc = "Find file in git files",
+    },
+
+    ["<leader>gt"] = {
+      function()
+        require("telescope.builtin").git_status() 
+      end,
+      desc = "Show git changes per file",
+    },
+
+    ["<leader>pw"] = {
+      function()
+        require("telescope.builtin").live_grep() 
+      end,
+      desc = "Find word using grep",
+    }
+    -- END OF TELESCOPE
   },
+
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
