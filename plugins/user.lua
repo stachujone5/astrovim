@@ -9,13 +9,4 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
-  
-
-  -- COLOR SCHEME
-  {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},
-  }
 }

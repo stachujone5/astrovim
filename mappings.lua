@@ -12,9 +12,9 @@ return {
     -- TELESCOPE
     ["<C-p>"] = {
       function()
-        require("telescope.builtin").git_files() 
+        require("telescope.builtin").find_files() 
       end,
-      desc = "Find file in git files",
+      desc = "Find file",
     },
 
     ["<leader>gt"] = {
