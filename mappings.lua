@@ -36,6 +36,13 @@ return {
     -- END OF NEO-TREE
   },
 
+  i = {
+    ["<C-j>"] = { "<Down>", desc = "Navigate down in insert mode" },
+    ["<C-k>"] = { "<Up>", desc = "Navigate up in insert mode" },
+    ["<C-h>"] = { "<Left>", desc = "Navigate left in insert mode" },
+    ["<C-l>"] = { "<Right>", desc = "Navigate right in insert mode" },
+  },
+
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
