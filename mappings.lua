@@ -1,7 +1,3 @@
--- Mapping data with "desc" stored directly by vim.keymap.set().
--- Please use this mappings table to set keyboard mapping since this is the
--- lower level configuration and more robust one. (which-key will
--- automatically pick-up stored data by this setting.)
 return {
   -- first key is the mode
   n = {
@@ -13,6 +9,7 @@ return {
     ["<C-u>"] = { "<C-u>zz", desc = "Screen in the middle when using C-z" },
     ["n"] = { "nzzzv", desc = "Screen in the middle when using find" },
     ["N"] = { "Nzzzv", desc = "Screen in the middle when using find" },
+    ["<C-w>"] = { "<C-w>w", desc = "Switch windows" },
 
     -- TELESCOPE
     ["<C-p>"] = {
@@ -30,21 +27,5 @@ return {
       desc = "Find word using grep",
     },
     -- END OF TELESCOPE
-
-    -- NEO-TREE
-    ["<C-w>"] = { "<C-w>w", desc = "Switch windows" },
-    -- END OF NEO-TREE
-  },
-
-  i = {
-    ["<C-j>"] = { "<Down>", desc = "Navigate down in insert mode" },
-    ["<C-k>"] = { "<Up>", desc = "Navigate up in insert mode" },
-    ["<C-h>"] = { "<Left>", desc = "Navigate left in insert mode" },
-    ["<C-l>"] = { "<Right>", desc = "Navigate right in insert mode" },
-  },
-
-  t = {
-    -- setting a mapping to false will disable it
-    -- ["<esc>"] = false,
   },
 }
