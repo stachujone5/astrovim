@@ -9,6 +9,7 @@ return {
         "tsserver",
         "jsonls",
         "tailwindcss",
+        "prismals",
       })
     end,
   },
